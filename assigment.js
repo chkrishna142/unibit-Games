@@ -21,3 +21,7 @@ const target = 4;
 
 const result1 = findSumWithSet(arr, target);
 console.log("First Combination For “4” : "); console.log(result1);
+
+
+const mergeArr = result1.flat().sort((a, b) => a - b);
+console.log("Merge Into a single Array : "); console.log(mergeArr);
