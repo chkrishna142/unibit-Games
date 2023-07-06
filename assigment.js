@@ -11,7 +11,7 @@
 //     Second Combination For “8” : [ [ 1,3,2,2], [8,-4,2,2],[-4,1,3,8],[8] ]
 
 
-function findSumWithSet(arr, target) {
+function findSumWithSet(arr, target) {//time complexity o(n)
     const output = [];           // output[] array for storing answer
     const set = new Set();       // Set to check whether a number is present or not
 
@@ -27,9 +27,13 @@ function findSumWithSet(arr, target) {
 
     return output;
 }
+
+
 // Time complexity of the findSumWithSet function using the set method is O(n), where n is the length of the input array.
 //  We can do the same with Two Pointer technique
-function findSumWithTwoPointers(arr, target) {
+
+
+function findSumWithTwoPointers(arr, target) { //time complexity o(n log n)
     const output = [];      // output[] array for storing answer
     arr.sort((a, b) => a - b);  //Sort the array for applying two pointer
 
@@ -61,7 +65,7 @@ const result1 = findSumWithSet(arr, target);
 console.log("First Combination For “4” : "); console.log(result1);
 
 //* Then merge the array into a single array using Flat method with sorting,,
-const mergeArr = result1.flat().sort((a, b) => a - b);
+const mergeArr = result1.flat().sort((a, b) => a - b);  // time complexity o(n log n)
 console.log("Merge Into a single Array : "); console.log(mergeArr);
 
 
@@ -112,6 +116,8 @@ function findSubseqWithSum(mergeArr, doubletarget) {
     backtrack(mergeArr, doubletarget, 0, presentSeq, result);  //using backtracking technique which starts wit 0 index
     return result;
 }
+//time complexity for findSubseqWithSum is o(2^n*2)
+
 
 //Thir part of the question 
 const doubletarget = 8;  //double the target
